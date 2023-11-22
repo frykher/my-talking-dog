@@ -21,8 +21,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String message = "";
+  bool messageVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +41,17 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       extendBodyBehindAppBar: true,
-      body: Dog(),
+      body: Column(children: [
+        Text(message),
+        Dog(
+          messageUpdater: (msg) {
+            setState(() {
+              message = msg;
+              messageVisible = true;
+            });
+          },
+        ),
+      ]),
     );
   }
 }
