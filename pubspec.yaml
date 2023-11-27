@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  audioplayers: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +25,12 @@ flutter:
   assets:
     - assets/talking-dog-wallpaper.jpeg
     - assets/dog.png
+    - assets/audios/aww.mp3
+    - assets/audios/swipe.mp3
+    - assets/ball.jpg
+    - assets/audios/sneeze.mp3
+    - assets/steak.webp
+    - assets/audios/eat.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
