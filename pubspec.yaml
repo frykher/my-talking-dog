@@ -24,10 +24,13 @@ flutter:
 
   assets:
     - assets/talking-dog-wallpaper.jpeg
-    - assets/dog.png
+    - assets/dog-starter.png
+    - assets/dog-intermediate.jpg
+    - assets/dog-third.png
+    - assets/dog-max.jpg
     - assets/audios/aww.mp3
     - assets/audios/swipe.mp3
-    - assets/ball.jpg
+    - assets/ball.png
     - assets/audios/sneeze.mp3
     - assets/steak.webp
     - assets/audios/eat.mp3

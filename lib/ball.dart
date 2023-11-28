@@ -45,7 +45,7 @@ class _BallState extends State<Ball> {
             }
           },
           child: const Image(
-            image: AssetImage('assets/ball.jpg'),
+            image: AssetImage('assets/ball.png'),
             width: 150,
             height: 150,
           ),

@@ -1,13 +1,18 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-// todo: display heart effects and send message to top layer widget
 class Dog extends StatelessWidget {
-  Dog({super.key, required this.messageUpdater, required this.love});
+  Dog({super.key, required this.messageUpdater, required this.prestige});
 
   final Function(String) messageUpdater;
   final player = AudioPlayer();
-  final int love;
+  final int prestige;
+  static const List<String> dogPrestiges = [
+    'dog-starter.png',
+    'dog-intermediate.jpg',
+    'dog-third.png',
+    'dog-max.jpg'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,6 @@ class Dog extends StatelessWidget {
     }, builder:
         (BuildContext context, List<dynamic> accepted, List<dynamic> rejected) {
       return Container(
-        margin: const EdgeInsets.only(top: 150, right: 200),
         child: Center(
           child: GestureDetector(
             onLongPress: () {
@@ -32,8 +36,8 @@ class Dog extends StatelessWidget {
               messageUpdater("You pinch the dog's nose.");
               player.play(AssetSource('audios/sneeze.mp3'));
             },
-            child: const Image(
-              image: AssetImage('assets/dog.png'),
+            child: Image(
+              image: AssetImage('assets/${dogPrestiges[prestige]}'),
               width: 150,
               height: 150,
             ),
