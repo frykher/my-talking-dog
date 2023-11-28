@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 
 // todo: display heart effects and send message to top layer widget
 class Dog extends StatelessWidget {
-  Dog({super.key, required this.messageUpdater});
+  Dog({super.key, required this.messageUpdater, required this.love});
 
   final Function(String) messageUpdater;
   final player = AudioPlayer();
+  final int love;
 
   @override
   Widget build(BuildContext context) {

@@ -38,13 +38,27 @@ class _MyHomePageState extends State<MyHomePage> {
   String message = "";
   bool messageVisible = false;
   Timer? _currentTimer;
-  int combo = 0;
+  int _love = 0;
+  int _combo = 0;
+  String _lastAction = "";
+
+  void _incrementLove(String action) {
+    if (_lastAction != action) {
+      _combo = 0;
+    }
+    _combo += 1;
+    setState(() {
+      _love += _combo;
+    });
+    _lastAction = action;
+  }
 
   void onMessageUpdate(String msg) {
     setState(() {
       message = msg;
       messageVisible = true;
     });
+    _incrementLove(msg);
     if (_currentTimer != null) {
       _currentTimer!.cancel();
     }
@@ -56,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Text('Love: $_love'),
         title: const Center(
             child: Text('Dog', style: TextStyle(color: Colors.white))),
         elevation: 0,
@@ -77,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(message,
                     style: const TextStyle(color: Colors.yellow, fontSize: 32)),
               ),
-              Dog(messageUpdater: onMessageUpdate),
+              Dog(messageUpdater: onMessageUpdate, love: _love),
               Column(
                 children: [
                   Ball(
