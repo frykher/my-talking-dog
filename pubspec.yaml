@@ -1,17 +1,23 @@
 name: my_talking_dog
 description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: ">=3.1.4 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
   audioplayers: ^5.2.1
+  flutter_onboarding_slider: ^1.0.11
+  flutter_avif: ^2.3.0
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  provider: ^6.1.2
+  firebase_database: ^10.4.0
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +29,9 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/snoop_dog.jpg
+    - assets/ai-dog.webp
+    - assets/cat-hoodie.avif
     - assets/talking-dog-wallpaper.jpeg
     - assets/dog-starter.png
     - assets/dog-intermediate.jpg

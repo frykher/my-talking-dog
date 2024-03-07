@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "182061417002",
+    "project_id": "my-talking-dog-20ba0",
+    "storage_bucket": "my-talking-dog-20ba0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182061417002:android:51dbc83995b50f13f53953",
+        "android_client_info": {
+          "package_name": "com.example.my_talking_dog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtYqH-brwDSlAWoDSODkcSNQmffH9KCO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
